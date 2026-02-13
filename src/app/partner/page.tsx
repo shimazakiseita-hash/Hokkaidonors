@@ -26,18 +26,18 @@ export default function PartnerPage() {
   return (
     <>
       <Section
-        title="企業・自治体向けの協業"
-        lead="若者向けイベント、地域連携企画、発信施策を学生視点で設計・実行します。"
+        title="企業・自治体のみなさまへ"
+        lead="若者向けイベント、地域連携企画、発信施策を、学生ならではの視点で丁寧に設計・実行します。"
       >
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center rounded-xl bg-sky-600 px-7 py-3 text-base font-bold text-white shadow-sm transition hover:bg-sky-700"
+          className="inline-flex items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-7 py-3 text-base font-semibold text-amber-700 transition hover:bg-amber-100"
         >
-          協業相談をする
+          まずは相談してみる
         </Link>
       </Section>
 
-      <Section title="提供価値">
+      <Section title="私たちにできること">
         <div className="space-y-4">
           {site.partnerValueProps.map((item) => (
             <Card key={item.title}>
@@ -48,11 +48,11 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      <Section title="相談しやすい進め方">
+      <Section title="ご一緒する時の進め方">
         <div className="space-y-4">
           {process.map((step) => (
             <Card key={step.step}>
-              <p className="text-sm font-bold text-sky-700">STEP {step.step}</p>
+              <p className="text-sm font-bold text-amber-700">STEP {step.step}</p>
               <h3 className="mt-2 text-2xl font-bold text-slate-900">{step.title}</h3>
               <p className="mt-3 text-base leading-8 text-slate-600">{step.detail}</p>
             </Card>
@@ -60,7 +60,7 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      <Section title={site.partnerProof.headline}>
+      <Section title="これまでの活動">
         <div className="space-y-4">
           <Card>
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-md">
@@ -75,6 +75,7 @@ export default function PartnerPage() {
             <p className="mt-3 text-base leading-8 text-slate-600">
               錦糸町マルイでの実施事例。学生が企画・導線設計・当日運営までを担当しました。
             </p>
+            <p className="mt-3 text-sm text-slate-500">学生と企業が同じ目線で動いた、共創型ポップアップの事例です。</p>
           </Card>
           {site.partnerProof.items.map((item) => (
             <Card key={item}>
@@ -84,14 +85,14 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      <Section title="まずは無料相談をご活用ください">
-        <div className="rounded-xl border border-sky-200 bg-white p-8 shadow-md sm:p-10">
+      <Section title="まずは気軽にご相談ください">
+        <div className="rounded-xl border border-amber-200 bg-white p-8 shadow-md sm:p-10">
           <p className="max-w-3xl text-base leading-8 text-slate-600">
             要件が固まっていない場合でも、課題共有から伴走します。企画共催の最短ルートを一緒に設計します。
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-xl bg-sky-600 px-8 py-3 text-base font-bold text-white shadow-sm transition hover:bg-sky-700"
+            className="mt-8 inline-flex items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-8 py-3 text-base font-semibold text-amber-700 transition hover:bg-amber-100"
           >
             企業・自治体として問い合わせる
           </Link>
@@ -109,16 +110,16 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      <Section title="最終相談窓口">
-        <div className="rounded-xl border border-sky-200 bg-white p-8 shadow-md sm:p-10">
+      <Section title="ご相談窓口">
+        <div className="rounded-xl border border-amber-200 bg-white p-8 shadow-md sm:p-10">
           <p className="max-w-3xl text-base leading-8 text-slate-600">
             施策の方向性が決まっていない段階でも相談可能です。まずは背景をお聞かせください。
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-xl bg-sky-600 px-8 py-3 text-base font-bold text-white shadow-sm transition hover:bg-sky-700"
+            className="mt-8 inline-flex items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-8 py-3 text-base font-semibold text-amber-700 transition hover:bg-amber-100"
           >
-            相談する
+            お問い合わせする
           </Link>
         </div>
       </Section>

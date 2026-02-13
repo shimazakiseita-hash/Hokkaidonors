@@ -8,7 +8,7 @@ type EventCardProps = {
 export default function EventCard({ event }: EventCardProps) {
   return (
     <Card>
-      <p className="text-sm font-semibold text-sky-700">{event.category}</p>
+      <p className="text-sm font-semibold text-amber-700">{event.category}</p>
       <h3 className="mt-2 text-2xl font-bold text-slate-900">{event.title}</h3>
       <p className="mt-2 text-base text-slate-500">
         {event.dateRange} ・ {event.location}

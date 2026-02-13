@@ -3,7 +3,7 @@ import { site } from "@/app/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-amber-100 bg-amber-50/50">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-5 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div>
           <p className="text-sm font-semibold text-slate-900">{site.site.nameJa}</p>
@@ -28,7 +28,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <p className="border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+      <p className="border-t border-amber-100 py-4 text-center text-xs text-slate-500">
         © {new Date().getFullYear()} {site.site.name}. All rights reserved.
       </p>
     </footer>

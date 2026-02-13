@@ -81,7 +81,7 @@ export default function JoinPage() {
         <div className="space-y-4">
           {joinFlow.map((step) => (
             <Card key={step.step}>
-              <p className="text-sm font-bold text-sky-700">STEP {step.step}</p>
+              <p className="text-sm font-bold text-amber-700">STEP {step.step}</p>
               <h3 className="mt-2 text-2xl font-bold text-slate-900">{step.title}</h3>
               <p className="mt-3 text-base leading-8 text-slate-600">{step.detail}</p>
             </Card>

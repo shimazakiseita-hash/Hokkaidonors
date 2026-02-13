@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-white text-slate-900 antialiased">
+      <body className="bg-amber-50/30 text-slate-900 antialiased">
         <div className="min-h-screen">
           <Header />
           <main>{children}</main>

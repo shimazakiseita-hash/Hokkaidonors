@@ -25,7 +25,7 @@ export default function ContactPage() {
             <input
               type="text"
               name="name"
-              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-sky-500 focus:ring-2"
+              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2"
               placeholder="山田 太郎"
             />
           </label>
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <input
               type="email"
               name="email"
-              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-sky-500 focus:ring-2"
+              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2"
               placeholder="example@company.jp"
             />
           </label>
@@ -43,7 +43,7 @@ export default function ContactPage() {
         <div className="mt-5">
           <label className="text-sm font-medium text-slate-700">
             ご相談種別
-            <select className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-sky-500 focus:ring-2" name="type">
+            <select className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2" name="type">
               <option>企業・自治体の協業相談</option>
               <option>学生参加について</option>
               <option>その他</option>
@@ -57,7 +57,7 @@ export default function ContactPage() {
             <textarea
               name="message"
               rows={6}
-              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-sky-500 focus:ring-2"
+              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2"
               placeholder="ご相談内容を入力してください"
             />
           </label>
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
         <button
           type="button"
-          className="mt-6 inline-flex rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
+          className="mt-6 inline-flex rounded-xl bg-amber-600 px-5 py-3 text-sm font-semibold text-white hover:bg-amber-700"
         >
           送信（準備中）
         </button>
