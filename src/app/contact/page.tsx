@@ -18,14 +18,14 @@ export default function ContactPage() {
       title="お問い合わせ"
       lead="協業相談、登壇依頼、学生参加の相談を受け付けています。現在はフォームUIのみ公開中です。"
     >
-      <form className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <form className="rounded-2xl border border-violet-100 bg-white p-6 shadow-sm sm:p-8">
         <div className="grid gap-5 md:grid-cols-2">
           <label className="text-sm font-medium text-slate-700">
             お名前
             <input
               type="text"
               name="name"
-              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2"
+              className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none ring-violet-500 transition focus:border-violet-400 focus:ring-2"
               placeholder="山田 太郎"
             />
           </label>
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <input
               type="email"
               name="email"
-              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2"
+              className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none ring-violet-500 transition focus:border-violet-400 focus:ring-2"
               placeholder="example@company.jp"
             />
           </label>
@@ -43,7 +43,7 @@ export default function ContactPage() {
         <div className="mt-5">
           <label className="text-sm font-medium text-slate-700">
             ご相談種別
-            <select className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2" name="type">
+            <select className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none ring-violet-500 transition focus:border-violet-400 focus:ring-2" name="type">
               <option>企業・自治体の協業相談</option>
               <option>学生参加について</option>
               <option>その他</option>
@@ -57,7 +57,7 @@ export default function ContactPage() {
             <textarea
               name="message"
               rows={6}
-              className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-amber-500 focus:ring-2"
+              className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none ring-violet-500 transition focus:border-violet-400 focus:ring-2"
               placeholder="ご相談内容を入力してください"
             />
           </label>
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
         <button
           type="button"
-          className="mt-6 inline-flex rounded-xl bg-amber-600 px-5 py-3 text-sm font-semibold text-white hover:bg-amber-700"
+          className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
         >
           送信（準備中）
         </button>

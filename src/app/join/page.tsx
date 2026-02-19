@@ -33,7 +33,7 @@ export default function JoinPage() {
     <>
       <Section title="学生メンバー募集" lead="上京しても地元へ還元できるプロジェクトに参加しませんか。">
         <div className="space-y-5">
-          <div className="relative aspect-video overflow-hidden rounded-xl shadow-md">
+          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
             <img
               src="/images/BBQ.jpg"
               alt="Hokkaidonorsの学生コミュニティの活動風景"
@@ -44,45 +44,60 @@ export default function JoinPage() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex rounded-xl bg-slate-900 px-6 py-3 text-base font-semibold text-white hover:bg-slate-800"
+            className="inline-flex rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 text-base font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
           >
             参加を相談する
           </Link>
         </div>
       </Section>
 
-      <Section title="局紹介">
+      <Section title="局紹介" bg="violet">
         <div className="space-y-4">
-          {site.departments.map((department) => (
-            <Card key={department.name}>
-              <h3 className="text-2xl font-bold text-slate-900">{department.name}</h3>
-              <p className="mt-3 text-base font-medium text-slate-700">{department.summary}</p>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-base text-slate-600">
-                {department.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
-                ))}
-              </ul>
-            </Card>
-          ))}
+          {site.departments.map((department, i) => {
+            const colors = [
+              "from-violet-500 to-purple-500",
+              "from-blue-500 to-cyan-500",
+              "from-pink-500 to-rose-500",
+            ];
+            return (
+              <Card key={department.name}>
+                <div className={`mb-3 h-1.5 w-8 rounded-full bg-gradient-to-r ${colors[i % colors.length]}`} />
+                <h3 className="text-2xl font-bold text-slate-900">{department.name}</h3>
+                <p className="mt-3 text-base font-medium text-slate-700">{department.summary}</p>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-base text-slate-600">
+                  {department.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              </Card>
+            );
+          })}
         </div>
       </Section>
 
       <Section title="参加メリット">
         <div className="space-y-4">
-          {benefits.map((benefit) => (
+          {benefits.map((benefit, i) => (
             <Card key={benefit}>
-              <p className="text-base leading-8 text-slate-700">{benefit}</p>
+              <div className="flex items-start gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-100 text-sm font-bold text-violet-700">
+                  {i + 1}
+                </span>
+                <p className="text-base leading-8 text-slate-700">{benefit}</p>
+              </div>
             </Card>
           ))}
         </div>
       </Section>
 
-      <Section title="参加の流れ">
-        <div className="space-y-4">
+      <Section title="参加の流れ" bg="violet">
+        <div className="grid gap-4 sm:grid-cols-2">
           {joinFlow.map((step) => (
             <Card key={step.step}>
-              <p className="text-sm font-bold text-amber-700">STEP {step.step}</p>
-              <h3 className="mt-2 text-2xl font-bold text-slate-900">{step.title}</h3>
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-purple-500 text-sm font-bold text-white">
+                {step.step}
+              </div>
+              <h3 className="mt-4 text-2xl font-bold text-slate-900">{step.title}</h3>
               <p className="mt-3 text-base leading-8 text-slate-600">{step.detail}</p>
             </Card>
           ))}
@@ -92,7 +107,7 @@ export default function JoinPage() {
       <Section title="よくある質問">
         <div className="space-y-3">
           {site.faqs.join.map((item) => (
-            <details key={item.q} className="rounded-xl border border-slate-200 bg-white p-6">
+            <details key={item.q} className="rounded-2xl border border-violet-100 bg-white p-6 transition-shadow hover:shadow-md">
               <summary className="cursor-pointer text-base font-semibold text-slate-900">{item.q}</summary>
               <p className="mt-4 text-base leading-8 text-slate-600">{item.a}</p>
             </details>

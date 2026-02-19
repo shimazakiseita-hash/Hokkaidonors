@@ -25,18 +25,18 @@ export default function ActivitiesPage() {
   return (
     <>
       <Section title="活動ハイライト" lead="企画・体験活動の現場から、地域支援の具体的な取り組みを発信しています。">
-        <div className="relative aspect-video overflow-hidden rounded-xl shadow-md">
+        <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
           <img
             src="/images/event.jpg"
             alt="Hokkaidonorsの活動イベントの様子"
             className="h-full w-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-black/10" />
         </div>
       </Section>
 
-      <Section title="イベント一覧" lead="企画・教育・交流を軸に、北海道へ還元する活動を実施しています。">
+      <Section title="イベント一覧" lead="企画・教育・交流を軸に、北海道へ還元する活動を実施しています。" bg="violet">
         <div className="space-y-4">
           {site.events.map((event) => (
             <EventCard key={`${event.title}-${event.dateRange}`} event={event} />
@@ -45,19 +45,19 @@ export default function ActivitiesPage() {
       </Section>
 
       <Section title="実績カード">
-        <div className="space-y-4">
+        <div className="grid gap-4 sm:grid-cols-3">
           {proofCards.map((metric) => (
             <Card key={metric.label}>
-              <p className="text-3xl font-extrabold tracking-tight text-slate-900">{metric.value}</p>
+              <p className="text-3xl font-extrabold tracking-tight text-violet-600">{metric.value}</p>
               <p className="mt-2 text-base font-semibold text-slate-700">{metric.label}</p>
             </Card>
           ))}
         </div>
       </Section>
 
-      <Section title="団体紹介資料">
+      <Section title="団体紹介資料" bg="violet">
         <div className="space-y-4">
-          <div className="relative aspect-video overflow-hidden rounded-xl shadow-md">
+          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
             <img
               src="/images/syoukai.jpg"
               alt="Hokkaidonorsの団体紹介資料"

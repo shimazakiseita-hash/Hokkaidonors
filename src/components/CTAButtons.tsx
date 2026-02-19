@@ -10,14 +10,14 @@ export default function CTAButtons({ primary, secondary }: CTAButtonsProps) {
     <div className="flex flex-col gap-3 sm:flex-row">
       <Link
         href={primary.href}
-        className="inline-flex items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-5 py-3 text-sm font-semibold text-amber-700 transition hover:bg-amber-100"
+        className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
       >
         {primary.label}
       </Link>
       {secondary ? (
         <Link
           href={secondary.href}
-          className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+          className="inline-flex items-center justify-center rounded-xl border-2 border-violet-200 bg-white px-6 py-3 text-sm font-semibold text-violet-700 transition hover:border-violet-300 hover:bg-violet-50"
         >
           {secondary.label}
         </Link>
