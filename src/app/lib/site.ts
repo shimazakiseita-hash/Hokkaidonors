@@ -54,8 +54,9 @@ export const site = {
     description:
       "北海道出身の学生が東京を拠点に、地域支援・企画・発信を通じて北海道に還元するコミュニティです。",
     links: {
-      instagram: "https://www.instagram.com/hokkaidonors/",
-      x: "https://x.com/Hokkaidonors",
+      line: "https://line.me/R/ti/p/@453bmysh",
+      instagram: "https://www.instagram.com/hokkaidonors?igsh=MW0zeDltMTIwdHU5eg%3D%3D&utm_source=qr",
+      x: "https://x.com/hokkaidonors?s=21&t=f1dT-7ikz-6xaSWDilxZPA",
     },
     metrics: {
       members: 38,
