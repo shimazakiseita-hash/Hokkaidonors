@@ -25,14 +25,16 @@ export default function ActivitiesPage() {
   return (
     <>
       <Section title="活動ハイライト" lead="企画・体験活動の現場から、地域支援の具体的な取り組みを発信しています。">
-        <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
-          <img
-            src="/images/event.jpg"
-            alt="Hokkaidonorsの活動イベントの様子"
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-black/10" />
+        {/* event.jpg は縦長コラージュのため portrait で全体を表示 */}
+        <div className="flex justify-center">
+          <div className="relative w-full max-w-sm overflow-hidden rounded-2xl bg-slate-100 shadow-lg sm:max-w-md">
+            <img
+              src="/images/event.jpg"
+              alt="Hokkaidonorsの活動イベントの様子"
+              className="h-auto w-full object-contain"
+              loading="lazy"
+            />
+          </div>
         </div>
       </Section>
 
@@ -57,11 +59,12 @@ export default function ActivitiesPage() {
 
       <Section title="団体紹介資料" bg="violet">
         <div className="space-y-4">
-          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
+          {/* syoukai.jpg は横長スライドのため全体を object-contain で表示 */}
+          <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
             <img
               src="/images/syoukai.jpg"
               alt="Hokkaidonorsの団体紹介資料"
-              className="h-full w-full object-cover"
+              className="h-auto w-full object-contain"
               loading="lazy"
             />
           </div>

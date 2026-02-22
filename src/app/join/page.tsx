@@ -34,11 +34,11 @@ export default function JoinPage() {
     <>
       <Section title="学生メンバー募集" lead="上京しても地元へ還元できるプロジェクトに参加しませんか。">
         <div className="space-y-5">
-          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg sm:aspect-[4/3]">
             <img
               src="/images/BBQ.jpg"
               alt="Hokkaidonorsの学生コミュニティの活動風景"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10" />

@@ -83,11 +83,11 @@ export default function HomePage() {
       {/* Team */}
       <Section title="どんな人たちが動いているか" bg="violet">
         <div className="space-y-6">
-          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg sm:aspect-[4/3]">
             <img
               src="/images/BBQ.jpg"
               alt="Hokkaidonorsの学生コミュニティの様子"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/10" />

@@ -65,13 +65,16 @@ export default function PartnerPage() {
       <Section title="これまでの活動" bg="violet">
         <div className="space-y-4">
           <Card>
-            <div className="relative aspect-video overflow-hidden rounded-xl shadow-md">
-              <img
-                src="/images/popup.jpg"
-                alt="札幌スイーツセレクションの出展の様子"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
+            {/* popup.jpg は縦長フライヤーのため全体を object-contain で表示 */}
+            <div className="flex justify-center">
+              <div className="w-full max-w-xs overflow-hidden rounded-xl bg-stone-50 shadow-md sm:max-w-sm">
+                <img
+                  src="/images/popup.jpg"
+                  alt="札幌スイーツセレクションの出展の様子"
+                  className="h-auto w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <h3 className="mt-5 text-2xl font-bold text-slate-900">札幌スイーツセレクション</h3>
             <p className="mt-3 text-base leading-8 text-slate-600">
