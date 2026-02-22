@@ -27,13 +27,30 @@ export type FaqItem = {
   a: string;
 };
 
+export type ArticleBlock =
+  | { type: "p"; text: string }
+  | { type: "h3"; text: string }
+  | { type: "ul"; items: string[] }
+  | { type: "quote"; text: string; attribution?: string };
+
+export type ArticleItem = {
+  slug: string;
+  title: string;
+  author: string;
+  publishedAt: string;
+  updatedAt?: string;
+  readingTime: string;
+  excerpt: string;
+  body: ArticleBlock[];
+};
+
 export const site = {
   url: "https://hokkaidonors.jp",
   site: {
     name: "Hokkaidonors",
     nameJa: "ホッカイドナーズ",
-    tagline: "北海道と東京をつなぐ、道産子学生の地域支援コミュニティ",
-    subtagline: "上京しても、地元に貢献できる文化をつくる。",
+    tagline: "東京にいながら北海道に貢献できるコミュニティ",
+    subtagline: "2025年8月に立ち上げ、現在38名で活動中。",
     description:
       "北海道出身の学生が東京を拠点に、地域支援・企画・発信を通じて北海道に還元するコミュニティです。",
     links: {
@@ -41,7 +58,7 @@ export const site = {
       x: "https://x.com/Hokkaidonors",
     },
     metrics: {
-      members: 36,
+      members: 38,
       eventsPerYear: 12,
       partners: ["北海道庁"],
     },
@@ -49,6 +66,7 @@ export const site = {
   routes: [
     { href: "/", label: "トップ" },
     { href: "/activities", label: "活動・実績" },
+    { href: "/news", label: "ブログ" },
     { href: "/partner", label: "企業・自治体の方へ" },
     { href: "/join", label: "学生の方へ" },
     { href: "/contact", label: "お問い合わせ" },
@@ -103,6 +121,101 @@ export const site = {
       category: "新歓/交流",
     },
   ] satisfies EventItem[],
+  articles: [
+    {
+      slug: "dosanko-bbq-2025",
+      title: "道産子BBQ in Tokyoを開催しました！",
+      author: "ktekitou1130",
+      publishedAt: "2026-02-04",
+      readingTime: "1分",
+      excerpt:
+        "2025年8月30日、Hokkaidonors初のイベント・道産子BBQ in Tokyoを開催。チームの可能性を肌で感じた1日を振り返ります。",
+      body: [
+        {
+          type: "p",
+          text: "２０２５年８月３０日、Hokkaidonorsの初めてのイベントである道産子BBQ in Tokyoが催されました。",
+        },
+        {
+          type: "p",
+          text: "このイベントは団体内で行われた内部イベントでありましたが、ある時は盛り上がり、ある時は真面目に議論する、そんなHokkaidonorsらしさがにじみでるような、そんなイベントであったと思い返します。あれから２度のイベントを経てこの記事を書いていますが、あのBBQからHokkaidonorsの潜在的なパワーを肌で感じていました。その力は場数を踏むにつれて、メンバーが増えるにつれて、様々な方々と関わる機会を経るにつれて、強く大きく、いい意味で複雑になっていっている気がしますが、やはりその核はあのBBQであったと個人的に感じています。",
+        },
+        {
+          type: "quote",
+          text: "会計、当日の企画、集客、フォームづくり、当日来てくれた子もみんなのおかげで本当にいい初回でした！……局ごとに集まって真剣な話をしているところを見て、本当に感極まりない気持ちでした。騒ぐとこは騒いで、真剣な時は集中してるみんながかっこよかった！",
+          attribution: "代表",
+        },
+        {
+          type: "p",
+          text: "これから様々なことを経験していくと思うし、この団体の行く末は誰にもわかりませんが、この記憶を核に据えてこれからも全身全霊で頑張りたいと思います。",
+        },
+      ],
+    },
+    {
+      slug: "ethical-ennichi-2025",
+      title: "エシカル縁日に出展しました！",
+      author: "ktekitou1130",
+      publishedAt: "2025-12-30",
+      updatedAt: "2026-01-04",
+      readingTime: "2分",
+      excerpt:
+        "2025年12月13日、エシカル縁日に出展。スギを使ったコースター作りと木育の発信を通じて、世代を超えた対話が生まれました。",
+      body: [
+        {
+          type: "p",
+          text: "2025年12月13日、Hokkaidonorsは「エシカル縁日」に出店しました！",
+        },
+        {
+          type: "p",
+          text: "8月のワークショップに続き、スギを使ったものづくり体験と木育の発信を行いました。",
+        },
+        {
+          type: "p",
+          text: "単なるものづくりでおわるのではなく、その背景にある循環を伝えることを目標に活動をしました。",
+        },
+        {
+          type: "p",
+          text: "当日は、コースター作りを実施しました。",
+        },
+        {
+          type: "p",
+          text: "今回のイベントでは、モノ作り以上に様々な方との対話をすることができたのが大きい収穫になりました。",
+        },
+        {
+          type: "ul",
+          items: [
+            "ブースを訪れた方から「北海道に行ったことがあります！」「行ってみたい！」という声をたくさんいただき、改めて北海道の良さを発信する喜びを実感しました。",
+            "小さなお子様が笑顔で工作に没頭する姿や、大人の参加者と深く木材について語り合う場面など、世代を超えた「木育」の輪が広がりました。",
+            "初めて名刺交換に挑戦したメンバーも、先輩のサポートを受けながら積極的に人脈を広げることができ、今後の活動に繋がる貴重な出会いがたくさんありました。",
+          ],
+        },
+        {
+          type: "p",
+          text: "初めてのイベント運営に携わるメンバーも多い中、全員が今自分ができることを考え、自発的に動けていました！",
+        },
+        {
+          type: "quote",
+          text: "渉外局が積極的に名刺交換をして人脈を作り、誰一人動いていない人がいなかったのが本当に凄かった！",
+          attribution: "メンバーの声",
+        },
+        {
+          type: "p",
+          text: "準備段階での場所の周知や時間配分など、次回への改善点も見つかりましたが、臨機応変にハプニングを乗り越えられた経験は、チームとしての大きな成果になったと思います。",
+        },
+        {
+          type: "h3",
+          text: "これからのHokkaidonors",
+        },
+        {
+          type: "p",
+          text: "今回のイベントでも北海道への恩返しという団体のコンセプトをひろげていくことができました。",
+        },
+        {
+          type: "p",
+          text: "イベントでの出会いや学びを大切に、これからもHokkaidonorsは楽しみながら学べる活動を続けていきます。当日足を運んでくださった皆様、本当にありがとうございました！",
+        },
+      ],
+    },
+  ] satisfies ArticleItem[],
   partnerValueProps: [
     {
       title: "若者向けイベントの企画・共催",
