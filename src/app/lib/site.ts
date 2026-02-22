@@ -48,7 +48,7 @@ export const site = {
   url: "https://hokkaidonors.jp",
   site: {
     name: "Hokkaidonors",
-    nameJa: "ホッカイドナーズ",
+    nameJa: "Hokkaidonors",
     tagline: "東京にいながら北海道に貢献できるコミュニティ",
     subtagline: "2025年8月に立ち上げ、現在38名で活動中。",
     description:
