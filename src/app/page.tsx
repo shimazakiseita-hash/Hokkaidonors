@@ -28,11 +28,6 @@ export default function HomePage() {
       value: `${site.site.metrics.eventsPerYear}件`,
       note: "企画・教育・交流イベントを実施",
     },
-    {
-      label: "主要連携先",
-      value: `${site.site.metrics.partners.length}団体`,
-      note: site.site.metrics.partners.join(" / "),
-    },
   ];
 
   return (
