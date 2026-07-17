@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Card from "@/components/Card";
 import Section from "@/components/Section";
 import { site } from "@/app/lib/site";
@@ -22,19 +23,39 @@ const steps = [
   { step: "04", title: "振り返り", detail: "成果整理と次アクションを提案" },
 ];
 
+const otherProof = ["北海道庁との連携実績あり", "ニセコ関連プロジェクト", "子ども食堂事業"];
+
 export default function PartnerPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: site.faqs.partner.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      {/* Hero */}
       <Section
         title="企業・自治体のみなさまへ"
         lead="若者向けイベント、地域連携企画、発信施策を、学生ならではの視点で丁寧に設計・実行します。"
       >
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-7 py-3 text-base font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
-        >
-          まずは相談してみる
-        </Link>
+        <div className="space-y-6">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-7 py-3 text-base font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
+          >
+            まずは相談してみる
+          </Link>
+        </div>
       </Section>
 
       <Section title="私たちにできること" bg="violet">
@@ -64,47 +85,51 @@ export default function PartnerPage() {
 
       <Section title="これまでの活動" bg="violet">
         <div className="space-y-4">
+          {/* スイーツセレクション */}
           <Card>
-            {/* popup.jpg は縦長フライヤーのため全体を object-contain で表示 */}
-            <div className="flex justify-center">
-              <div className="w-full max-w-xs overflow-hidden rounded-xl bg-stone-50 shadow-md sm:max-w-sm">
-                <img
-                  src="/images/popup.jpg"
-                  alt="札幌スイーツセレクションの出展の様子"
-                  className="h-auto w-full object-contain"
-                  loading="lazy"
-                />
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
+                <Image src="/images/スイーツセレクション＿当日1.jpg" alt="スイーツセレクション当日" fill className="object-cover" />
+              </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
+                <Image src="/images/スイーツセレクション＿当日2.jpg" alt="スイーツセレクション当日" fill className="object-cover" />
               </div>
             </div>
             <h3 className="mt-5 text-2xl font-bold text-slate-900">札幌スイーツセレクション</h3>
-            <p className="mt-3 text-base leading-8 text-slate-600">
-              錦糸町マルイでの実施事例。学生が企画・導線設計・当日運営までを担当しました。
-            </p>
+            <p className="mt-3 text-base leading-8 text-slate-600">錦糸町マルイでの実施事例。学生が企画・導線設計・当日運営までを担当しました。</p>
             <p className="mt-3 text-sm text-slate-500">学生と企業が同じ目線で動いた、共創型ポップアップの事例です。</p>
           </Card>
-          {site.partnerProof.items.map((item) => (
-            <Card key={item}>
-              <p className="text-base font-semibold text-slate-800">{item}</p>
-            </Card>
-          ))}
+
+          {/* りっけんプレゼンテーション */}
+          <Card>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                <Image src="/images/りっけんプレゼンテーション.jpg" alt="りっけんプレゼンテーション大会" fill className="object-cover" />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                <Image src="/images/りっけんプレゼンテーション2.jpg" alt="りっけんプレゼンテーション大会" fill className="object-cover" />
+              </div>
+            </div>
+            <h3 className="mt-5 text-2xl font-bold text-slate-900">りっけんプレゼンテーション大会</h3>
+            <p className="mt-3 text-base leading-8 text-slate-600">学生が自らの考えや活動を発表するプレゼンテーション大会に参加・関与しました。</p>
+          </Card>
+
+          {/* その他の実績まとめ */}
+          <Card>
+            <h3 className="text-lg font-bold text-slate-900">その他の連携実績</h3>
+            <ul className="mt-4 space-y-2">
+              {otherProof.map((item) => (
+                <li key={item} className="flex items-center gap-3 text-base text-slate-700">
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Card>
         </div>
       </Section>
 
-      <Section title="まずは気軽にご相談ください">
-        <div className="rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-8 shadow-sm sm:p-10">
-          <p className="max-w-3xl text-base leading-8 text-slate-600">
-            要件が固まっていない場合でも、課題共有から伴走します。企画共催の最短ルートを一緒に設計します。
-          </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-3 text-base font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
-          >
-            企業・自治体として問い合わせる
-          </Link>
-        </div>
-      </Section>
-
-      <Section title="よくある質問" bg="violet">
+      <Section title="よくある質問">
         <div className="space-y-3">
           {site.faqs.partner.map((item) => (
             <details key={item.q} className="rounded-2xl border border-violet-100 bg-white p-6 transition-shadow hover:shadow-md">
@@ -115,16 +140,16 @@ export default function PartnerPage() {
         </div>
       </Section>
 
-      <Section title="ご相談窓口">
-        <div className="rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-8 shadow-sm sm:p-10">
+      <Section title="まずは気軽にご相談ください" bg="violet">
+        <div className="rounded-2xl border border-violet-200 bg-white p-8 shadow-sm sm:p-10">
           <p className="max-w-3xl text-base leading-8 text-slate-600">
-            施策の方向性が決まっていない段階でも相談可能です。まずは背景をお聞かせください。
+            要件が固まっていない場合でも、課題共有から伴走します。企画共催の最短ルートを一緒に設計します。
           </p>
           <Link
             href="/contact"
             className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-3 text-base font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
           >
-            お問い合わせする
+            企業・自治体として問い合わせる
           </Link>
         </div>
       </Section>

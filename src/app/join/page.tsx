@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Card from "@/components/Card";
 import Section from "@/components/Section";
 import { site } from "@/app/lib/site";
@@ -30,16 +31,30 @@ const benefits = [
 ];
 
 export default function JoinPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: site.faqs.join.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Section title="学生メンバー募集" lead="上京しても地元へ還元できるプロジェクトに参加しませんか。">
         <div className="space-y-5">
           <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg sm:aspect-[4/3]">
-            <img
-              src="/images/BBQ.jpg"
+            <Image
+              src="/images/対面ミーティング.jpg"
               alt="Hokkaidonorsの学生コミュニティの活動風景"
-              className="h-full w-full object-cover object-center"
-              loading="lazy"
+              fill
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-black/10" />
           </div>
@@ -107,6 +122,39 @@ export default function JoinPage() {
               <p className="mt-3 text-base leading-7 text-slate-600">{step.detail}</p>
             </Card>
           ))}
+        </div>
+      </Section>
+
+      <Section title="毎週のミーティング" lead="毎週金曜日の夜、オンラインで全員が集まっています。">
+        <div className="space-y-5">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md sm:aspect-video">
+            <Image
+              src="/images/オンラインミーティング.jpg"
+              alt="Hokkaidonorsのオンラインミーティングの様子"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+          <p className="text-base leading-8 text-slate-600">
+            各局の代表が進捗を共有し、次のイベントに向けた準備を全員で確認します。
+            夜遅い時間のスタートですが、誰かに言われてではなく自分から動くのがHokkaidonorsらしさです。
+          </p>
+          <div className="rounded-2xl border border-violet-100 bg-white p-6 shadow-sm">
+            <ul className="space-y-3 text-base text-slate-700">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
+                進行中プロジェクトの進捗確認と次週の予定共有
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
+                今週頑張ったメンバーをみんなで称え合う <span className="font-semibold text-violet-700">MVP</span> コーナー
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
+                地元や高校時代の話で盛り上がることも。真剣とゆるさのバランスが心地いい場です
+              </li>
+            </ul>
+          </div>
         </div>
       </Section>
 

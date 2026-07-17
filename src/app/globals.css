@@ -23,24 +23,19 @@ h3 {
   letter-spacing: -0.01em;
 }
 
+/* ─── Hero animations ───────────────────────────────── */
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fade-in {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out both;
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-fade-in {
@@ -51,3 +46,163 @@ h3 {
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
+
+/* ─── Scroll-driven entry animations ────────────────── */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes grow-bar {
+  from { width: 0; }
+  to   { width: 2.5rem; }
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-reveal {
+    animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+  }
+
+  .scroll-reveal-slow {
+    animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+
+  .section-bar {
+    animation: grow-bar 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
+  }
+}
+
+@supports not (animation-timeline: view()) {
+  .section-bar { width: 2.5rem; }
+}
+
+/* ─── Section bar ───────────────────────────────────── */
+.section-bar {
+  height: 4px;
+  width: 0;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7c3aed, #c026d3);
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Gradient text ─────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #ede9fe 55%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Card glow hover ───────────────────────────────── */
+.card-hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 40px -8px rgba(124, 58, 237, 0.18),
+    0 4px 16px -4px rgba(124, 58, 237, 0.08);
+  border-color: #c4b5fd;
+}
+
+/* ─── Hero overlay pulse ────────────────────────────── */
+@keyframes overlay-breathe {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.88; }
+}
+
+.hero-overlay {
+  animation: overlay-breathe 10s ease-in-out infinite;
+}
+
+/* ─── Hero gradient animated ────────────────────────── */
+@keyframes gradient-drift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #4c1d95cc, #6d28d9b3, #7e22ceb3, #be185db3);
+  background-size: 300% 300%;
+  animation: gradient-drift 12s ease infinite;
+}
+
+/* =============================================
+   MicroCMS リッチテキスト 記事本文スタイル
+   ============================================= */
+.article-body {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.article-body p { margin-bottom: 1.5rem; }
+
+.article-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ede9fe;
+}
+
+.article-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article-body ul { list-style-type: disc; }
+.article-body ol { list-style-type: decimal; }
+
+.article-body blockquote {
+  border-left: 4px solid #a78bfa;
+  background: #f5f3ff;
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #475569;
+}
+
+.article-body a {
+  color: #7c3aed;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-body a:hover { color: #5b21b6; }
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.article-body strong {
+  font-weight: 700;
+  color: #0f172a;
+}

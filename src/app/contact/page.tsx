@@ -35,7 +35,7 @@ export default async function ContactPage({ searchParams }: Props) {
         >
           {/* FormSubmit 設定 */}
           <input type="hidden" name="_subject" value="【Hokkaidonors】お問い合わせが届きました" />
-          <input type="hidden" name="_next" value="https://hokkaidonors.jp/contact?sent=true" />
+          <input type="hidden" name="_next" value="https://hokkaidonors.com/contact?sent=true" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
 

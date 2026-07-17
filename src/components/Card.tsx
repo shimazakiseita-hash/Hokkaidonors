@@ -8,7 +8,7 @@ type CardProps = {
 export default function Card({ children, className = "" }: CardProps) {
   return (
     <article
-      className={`rounded-2xl border border-violet-100 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${className}`}
+      className={`card-hover rounded-2xl border border-violet-100 bg-white p-7 shadow-sm ${className}`}
     >
       {children}
     </article>

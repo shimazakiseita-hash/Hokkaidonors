@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/app/lib/site";
 
 const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? site.url);
@@ -44,6 +45,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );

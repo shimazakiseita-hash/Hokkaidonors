@@ -45,21 +45,21 @@ export type ArticleItem = {
 };
 
 export const site = {
-  url: "https://hokkaidonors.jp",
+  url: "https://hokkaidonors.com",
   site: {
     name: "Hokkaidonors",
     nameJa: "Hokkaidonors",
     tagline: "東京にいながら北海道に貢献できるコミュニティ",
-    subtagline: "2025年8月に立ち上げ、現在38名で活動中。",
+    subtagline: "2025年8月に立ち上げ、現在45名で活動中。東京・北海道の2拠点で展開。",
     description:
-      "北海道出身の学生が東京を拠点に、地域支援・企画・発信を通じて北海道に還元するコミュニティです。",
+      "北海道出身の学生が東京・北海道を拠点に、地域支援・企画・発信を通じて北海道に還元するコミュニティです。",
     links: {
       line: "https://line.me/R/ti/p/@453bmysh",
       instagram: "https://www.instagram.com/hokkaidonors?igsh=MW0zeDltMTIwdHU5eg%3D%3D&utm_source=qr",
       x: "https://x.com/hokkaidonors?s=21&t=f1dT-7ikz-6xaSWDilxZPA",
     },
     metrics: {
-      members: 38,
+      members: 45,
       eventsPerYear: 12,
       partners: ["北海道庁"],
     },
@@ -237,7 +237,7 @@ export const site = {
       "北海道庁との連携実績あり",
       "ニセコ関連プロジェクト",
       "子ども食堂事業",
-      "コンサドーレ関連イベント",
+      "りっけんプレゼンテーション大会",
     ],
   },
   faqs: {
