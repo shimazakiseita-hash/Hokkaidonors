@@ -89,10 +89,10 @@ export default function PartnerPage() {
           <Card>
             <div className="grid grid-cols-2 gap-3">
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
-                <Image src="/images/スイーツセレクション＿当日1.jpg" alt="スイーツセレクション当日" fill className="object-cover" />
+                <Image src="/images/events/sweets-selection/day-01.jpg" alt="スイーツセレクション当日" fill className="object-cover" />
               </div>
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
-                <Image src="/images/スイーツセレクション＿当日2.jpg" alt="スイーツセレクション当日" fill className="object-cover" />
+                <Image src="/images/events/sweets-selection/day-02.jpg" alt="スイーツセレクション当日" fill className="object-cover" />
               </div>
             </div>
             <h3 className="mt-5 text-2xl font-bold text-slate-900">札幌スイーツセレクション</h3>
@@ -104,10 +104,10 @@ export default function PartnerPage() {
           <Card>
             <div className="grid grid-cols-2 gap-3">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image src="/images/りっけんプレゼンテーション.jpg" alt="りっけんプレゼンテーション大会" fill className="object-cover" />
+                <Image src="/images/events/rikken-presentation/01.jpg" alt="りっけんプレゼンテーション大会" fill className="object-cover" />
               </div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image src="/images/りっけんプレゼンテーション2.jpg" alt="りっけんプレゼンテーション大会" fill className="object-cover" />
+                <Image src="/images/events/rikken-presentation/02.jpg" alt="りっけんプレゼンテーション大会" fill className="object-cover" />
               </div>
             </div>
             <h3 className="mt-5 text-2xl font-bold text-slate-900">りっけんプレゼンテーション大会</h3>

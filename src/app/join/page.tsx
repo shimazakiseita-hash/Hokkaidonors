@@ -51,7 +51,7 @@ export default function JoinPage() {
         <div className="space-y-5">
           <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg sm:aspect-[4/3]">
             <Image
-              src="/images/対面ミーティング.jpg"
+              src="/images/members/meeting-in-person.jpg"
               alt="Hokkaidonorsの学生コミュニティの活動風景"
               fill
               className="object-cover object-center"
@@ -129,7 +129,7 @@ export default function JoinPage() {
         <div className="space-y-5">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md sm:aspect-video">
             <Image
-              src="/images/オンラインミーティング.jpg"
+              src="/images/members/meeting-online.jpg"
               alt="Hokkaidonorsのオンラインミーティングの様子"
               fill
               className="object-cover object-center"

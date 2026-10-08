@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <Image
-              src="/images/logo.jpg"
+              src="/images/brand/logo.jpg"
               alt="Hokkaidonors"
               width={32}
               height={32}

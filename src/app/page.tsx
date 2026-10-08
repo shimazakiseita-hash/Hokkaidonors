@@ -40,7 +40,7 @@ export default async function HomePage() {
     "@type": "Organization",
     name: "Hokkaidonors",
     url: base,
-    logo: `${base}/images/logo.jpg`,
+    logo: `${base}/images/brand/logo.jpg`,
     description: site.site.description,
     sameAs: [
       site.site.links.instagram,
@@ -61,9 +61,9 @@ export default async function HomePage() {
   ];
 
   const eventPhotos: Record<string, string> = {
-    "札幌スイーツセレクション": "/images/スイーツセレクション1.jpg",
-    "北海道スープカレー教室": "/images/スープカレー教室.jpg",
-    "3団体合同新歓": "/images/合同新歓.jpg",
+    "札幌スイーツセレクション": "/images/events/sweets-selection/01.jpg",
+    "北海道スープカレー教室": "/images/events/soup-curry-class/01.jpg",
+    "3団体合同新歓": "/images/events/joint-welcome-party/01.jpg",
   };
 
   return (
@@ -77,7 +77,7 @@ export default async function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/BBQ.jpg"
+            src="/images/events/bbq/01.jpg"
             alt=""
             fill
             priority
@@ -109,7 +109,7 @@ export default async function HomePage() {
         <div className="overflow-hidden rounded-2xl bg-white shadow-sm sm:flex">
           <div className="relative aspect-[63/89] w-full shrink-0 sm:w-72">
             <Image
-              src="/images/富良野起業家ゼミ.png"
+              src="/images/events/furano-zemi/flyer.png"
               alt="FURANO起業家ゼミ 富良野に向き合う、本気の2日間"
               fill
               className="object-cover"
@@ -163,7 +163,7 @@ export default async function HomePage() {
         <div className="space-y-6">
           <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg sm:aspect-[4/3]">
             <Image
-              src="/images/内部イベント.jpg"
+              src="/images/members/internal-event.jpg"
               alt="Hokkaidonorsのメンバーの様子"
               fill
               className="object-cover object-center"
@@ -224,7 +224,7 @@ export default async function HomePage() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-2 rounded-2xl border border-violet-100 bg-white px-8 py-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
               >
-                <Image src="/images/Fuzion_logo.png" alt="Fuzion" width={5362} height={1616} className="h-10 w-auto" />
+                <Image src="/images/partners/fuzion.png" alt="Fuzion" width={5362} height={1616} className="h-10 w-auto" />
                 <span className="text-sm font-semibold text-slate-700">Fuzion</span>
               </a>
             </div>

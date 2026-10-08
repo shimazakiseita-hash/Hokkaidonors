@@ -24,7 +24,7 @@ const featuredActivities = [
     category: "新歓 / 交流",
     desc: "学生団体YUZU・Fuzionとの3団体合同で新歓イベントを開催。学生・社会人20名以上が参加し、団体紹介のほか「自分が団体のメンバーになったら?」をテーマにした企画アイディア大会を実施。約5人のチームに分かれ、温泉街での星空ツアーや北海道の伝統工芸品体験ツアーなど各団体の方針に沿った企画を立案し、団体を超えた学生同士の交流を深めました。",
     images: [
-      { src: "/images/合同新歓.jpg", alt: "3団体合同新歓の様子" },
+      { src: "/images/events/joint-welcome-party/01.jpg", alt: "3団体合同新歓の様子" },
     ],
   },
   {
@@ -34,8 +34,8 @@ const featuredActivities = [
     category: "企画 / 出展",
     desc: "株式会社ブルーブロッサム・風牧場と共催し、北海道産野菜のパウンドケーキやドリンクヨーグルトを東京の消費者へ届けるポップアップを実施。企画・導線設計・当日運営まで学生が主導しました。",
     images: [
-      { src: "/images/スイーツセレクション1.jpg", alt: "スイーツセレクションの様子1" },
-      { src: "/images/スイーツセレクション2.jpg", alt: "スイーツセレクションの様子2" },
+      { src: "/images/events/sweets-selection/01.jpg", alt: "スイーツセレクションの様子1" },
+      { src: "/images/events/sweets-selection/02.jpg", alt: "スイーツセレクションの様子2" },
     ],
   },
   {
@@ -45,8 +45,8 @@ const featuredActivities = [
     category: "企画 / 体験",
     desc: "スギを使ったコースター作りと木育の発信を実施。世代を超えた「木育」の対話が生まれ、初めて名刺交換に挑戦したメンバーも積極的に人脈を広げました。",
     images: [
-      { src: "/images/エシカル縁日.jpg", alt: "エシカル縁日の様子" },
-      { src: "/images/エシカル縁日＿当日.jpg", alt: "エシカル縁日当日" },
+      { src: "/images/events/ethical-ennichi/01.jpg", alt: "エシカル縁日の様子" },
+      { src: "/images/events/ethical-ennichi/day-01.jpg", alt: "エシカル縁日当日" },
     ],
   },
   {
@@ -56,7 +56,7 @@ const featuredActivities = [
     category: "企画 / 教育",
     desc: "カレー食堂心と共催で、北海道スープカレーの料理教室を実施。参加者が実際に手を動かしながら北海道の食文化を体験できる場をつくりました。",
     images: [
-      { src: "/images/スープカレー教室.jpg", alt: "スープカレー教室の様子" },
+      { src: "/images/events/soup-curry-class/01.jpg", alt: "スープカレー教室の様子" },
     ],
   },
   {
@@ -66,18 +66,18 @@ const featuredActivities = [
     category: "企画 / 体験",
     desc: "北海道産の木材を使ったものづくり体験。木の温もりと北海道の林業・森林資源への関心を東京の参加者に届けました。",
     images: [
-      { src: "/images/ものづくりワークショップ.jpg", alt: "ものづくりワークショップの様子" },
+      { src: "/images/events/monozukuri-workshop/01.jpg", alt: "ものづくりワークショップの様子" },
     ],
   },
 ];
 
 const galleryPhotos = [
-  { src: "/images/BBQ.jpg", alt: "道産子BBQ", w: 1200, h: 800 },
-  { src: "/images/りっけんプレゼンテーション.jpg", alt: "りっけんプレゼンテーション大会", w: 845, h: 557 },
-  { src: "/images/りっけんプレゼンテーション2.jpg", alt: "りっけんプレゼンテーション大会", w: 845, h: 557 },
-  { src: "/images/スイーツセレクション＿当日1.jpg", alt: "スイーツセレクション当日", w: 1145, h: 1429 },
-  { src: "/images/スイーツセレクション＿当日2.jpg", alt: "スイーツセレクション当日", w: 1145, h: 1429 },
-  { src: "/images/対面ミーティング.jpg", alt: "対面ミーティング", w: 1477, h: 1108 },
+  { src: "/images/events/bbq/01.jpg", alt: "道産子BBQ", w: 1200, h: 800 },
+  { src: "/images/events/rikken-presentation/01.jpg", alt: "りっけんプレゼンテーション大会", w: 845, h: 557 },
+  { src: "/images/events/rikken-presentation/02.jpg", alt: "りっけんプレゼンテーション大会", w: 845, h: 557 },
+  { src: "/images/events/sweets-selection/day-01.jpg", alt: "スイーツセレクション当日", w: 1145, h: 1429 },
+  { src: "/images/events/sweets-selection/day-02.jpg", alt: "スイーツセレクション当日", w: 1145, h: 1429 },
+  { src: "/images/members/meeting-in-person.jpg", alt: "対面ミーティング", w: 1477, h: 1108 },
 ];
 
 export default function ActivitiesPage() {
@@ -162,7 +162,7 @@ export default function ActivitiesPage() {
         <div className="space-y-4">
           <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
             <Image
-              src="/images/パンフレット.jpg"
+              src="/images/brand/pamphlet.jpg"
               alt="Hokkaidonors団体紹介パンフレット"
               width={1206}
               height={850}

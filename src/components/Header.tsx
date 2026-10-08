@@ -17,7 +17,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3 sm:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <Image
-            src="/images/logo.jpg"
+            src="/images/brand/logo.jpg"
             alt="Hokkaidonors"
             width={40}
             height={40}
