@@ -215,6 +215,20 @@ export default async function HomePage() {
               すべての活動を見る →
             </Link>
           </div>
+          <div className="pt-6">
+            <h3 className="text-lg font-bold text-slate-900">ご一緒した学生団体</h3>
+            <div className="mt-4 flex flex-wrap gap-4">
+              <a
+                href="https://fuzion.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 rounded-2xl border border-violet-100 bg-white px-8 py-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <Image src="/images/Fuzion_logo.png" alt="Fuzion" width={5362} height={1616} className="h-10 w-auto" />
+                <span className="text-sm font-semibold text-slate-700">Fuzion</span>
+              </a>
+            </div>
+          </div>
         </div>
       </Section>
 
