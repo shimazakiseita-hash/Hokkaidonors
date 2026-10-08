@@ -121,6 +121,20 @@ export const site = {
       note: "",
       category: "新歓/交流",
     },
+    {
+      title: "FURANO起業家ゼミ",
+      dateRange: "8/1–8/2",
+      location: "フラノデザイン（北海道富良野市）",
+      note: "株式会社ふらのDMCと共催",
+      category: "企画/教育",
+    },
+    {
+      title: "道産子ピッチ（NoMaps2026）",
+      dateRange: "9/26",
+      location: "アーバンネット札幌リンクタワー",
+      note: "",
+      category: "企画/ワークショップ",
+    },
   ] satisfies EventItem[],
   articles: [
     {

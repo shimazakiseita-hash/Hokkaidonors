@@ -16,7 +16,29 @@ export const metadata: Metadata = {
   },
 };
 
-const featuredActivities = [
+type ActivityImage = { src: string; alt: string; contain?: boolean };
+
+const featuredActivities: { title: string; dateRange: string; location: string; category: string; desc: string; images: ActivityImage[] }[] = [
+  {
+    title: "道産子ピッチ（NoMaps2026）",
+    dateRange: "2026年9月26日",
+    location: "アーバンネット札幌リンクタワー",
+    category: "企画 / ワークショップ",
+    desc: "札幌で開催された「NoMaps2026」のスペシャルイベントとして主催。「まだ知られていない北海道を見つけよう！」をテーマに、道内外の大学生がチームを組み、180分で「富良野を訪れたくなる理由」を考えて1枚の観光マップにまとめ、プレゼンで発信しました。考えたアイデアは自治体や地域事業者との連携を通じ、実際のツアーや実証実験につなげることを目指しています。",
+    images: [
+      { src: "/images/events/nomaps/flyer.jpg", alt: "NoMaps2026 道産子ピッチのチラシ", contain: true },
+    ],
+  },
+  {
+    title: "FURANO起業家ゼミ",
+    dateRange: "2026年8月1日〜2日",
+    location: "フラノデザイン（北海道富良野市）",
+    category: "企画 / 教育",
+    desc: "株式会社ふらのDMCと共催で主催。富良野近郊の高校生と北海道の大学生が、提示された課題をもとに富良野の未来を創るアイデアを考えました。アントレプレナーシップやリーダーシップの考え方を実践的に学ぶ2日間となりました。",
+    images: [
+      { src: "/images/events/furano-zemi/flyer.png", alt: "FURANO起業家ゼミのチラシ", contain: true },
+    ],
+  },
   {
     title: "3団体合同新歓",
     dateRange: "2026年5月16日",
@@ -110,12 +132,12 @@ export default function ActivitiesPage() {
               {/* Photo row */}
               <div className={`grid gap-0.5 ${activity.images.length >= 2 ? "grid-cols-2" : "grid-cols-1"}`}>
                 {activity.images.map((img) => (
-                  <div key={img.src} className="relative aspect-[4/3] overflow-hidden">
+                  <div key={img.src} className={`relative aspect-[4/3] overflow-hidden ${img.contain ? "bg-violet-100" : ""}`}>
                     <Image
                       src={img.src}
                       alt={img.alt}
                       fill
-                      className="object-cover"
+                      className={img.contain ? "object-contain" : "object-cover"}
                       sizes="(max-width: 640px) 100vw, 50vw"
                     />
                   </div>

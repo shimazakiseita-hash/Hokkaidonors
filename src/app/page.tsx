@@ -64,6 +64,8 @@ export default async function HomePage() {
     "札幌スイーツセレクション": "/images/events/sweets-selection/01.jpg",
     "北海道スープカレー教室": "/images/events/soup-curry-class/01.jpg",
     "3団体合同新歓": "/images/events/joint-welcome-party/01.jpg",
+    "FURANO起業家ゼミ": "/images/events/furano-zemi/flyer.png",
+    "道産子ピッチ（NoMaps2026）": "/images/events/nomaps/flyer.jpg",
   };
 
   return (
@@ -109,8 +111,8 @@ export default async function HomePage() {
         <div className="overflow-hidden rounded-2xl bg-white shadow-sm sm:flex">
           <div className="relative aspect-[63/89] w-full shrink-0 sm:w-72">
             <Image
-              src="/images/events/furano-zemi/flyer.png"
-              alt="FURANO起業家ゼミ 富良野に向き合う、本気の2日間"
+              src="/images/events/sweet-potato-harvest/flyer.png"
+              alt="さつまいも収穫祭 ほったおいもは、おうちにもってかえれるよ！"
               fill
               className="object-cover"
               sizes="(max-width: 640px) 100vw, 288px"
@@ -118,17 +120,20 @@ export default async function HomePage() {
           </div>
           <div className="p-6 sm:p-8">
             <span className="rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700">
-              主催：Hokkaidonors　共催：株式会社ふらのDMC
+              主催：Hokkaidonors
             </span>
-            <h3 className="mt-3 text-2xl font-bold text-slate-900">FURANO起業家ゼミ</h3>
+            <h3 className="mt-3 text-2xl font-bold text-slate-900">さつまいも収穫祭</h3>
             <p className="mt-1 text-sm text-slate-500">
-              2026年8月1日(土)・8月2日(日) ・ フラノデザイン（北海道富良野市） ・ 参加費無料
+              2026年10月18日(日) 12:30〜17:00 ・ 小倉第二市民農園（千葉市若葉区） ・ 参加費無料 ・ 雨天中止
             </p>
             <p className="mt-3 text-base leading-8 text-slate-600">
-              富良野近郊の高校生と北海道の大学生が、提示された課題をもとに富良野の未来を創るアイデアを考えます。アントレプレナーシップやリーダーシップの考え方を実践的に学び、多様な学生達が新たな一歩を踏み出す2日間です。
+              小学1〜6年生を対象に、畑でのさつまいも掘りを開催します。掘ったおいもはおうちに持ち帰れます。お子様だけでも、親子でも参加できます。持ち物は軍手・よごれてもいい服と靴・飲み物です。
+            </p>
+            <p className="mt-2 text-sm text-slate-500">
+              保護者の方が下記フォームからお申し込みください（申込締切：10月16日(金)）。
             </p>
             <a
-              href="https://furanozemi.netlify.app/"
+              href="https://forms.gle/vxePxYitCnQVqoLt7"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:from-violet-700 hover:to-purple-700 hover:shadow-lg"
