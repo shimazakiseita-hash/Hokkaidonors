@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-type ActivityImage = { src: string; alt: string; contain?: boolean };
+type ActivityImage = { src: string; alt: string; w: number; h: number };
 
 const featuredActivities: { title: string; dateRange: string; location: string; category: string; desc: string; images: ActivityImage[] }[] = [
   {
@@ -26,7 +26,7 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "企画 / ワークショップ",
     desc: "札幌で開催された「NoMaps2026」のスペシャルイベントとして主催。「まだ知られていない北海道を見つけよう！」をテーマに、道内外の大学生がチームを組み、180分で「富良野を訪れたくなる理由」を考えて1枚の観光マップにまとめ、プレゼンで発信しました。考えたアイデアは自治体や地域事業者との連携を通じ、実際のツアーや実証実験につなげることを目指しています。",
     images: [
-      { src: "/images/events/nomaps/flyer.jpg", alt: "NoMaps2026 道産子ピッチのチラシ", contain: true },
+      { src: "/images/events/nomaps/flyer.jpg", alt: "NoMaps2026 道産子ピッチのチラシ", w: 1154, h: 1418 },
     ],
   },
   {
@@ -36,7 +36,7 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "企画 / 教育",
     desc: "株式会社ふらのDMCと共催で主催。富良野近郊の高校生と北海道の大学生が、提示された課題をもとに富良野の未来を創るアイデアを考えました。アントレプレナーシップやリーダーシップの考え方を実践的に学ぶ2日間となりました。",
     images: [
-      { src: "/images/events/furano-zemi/flyer.png", alt: "FURANO起業家ゼミのチラシ", contain: true },
+      { src: "/images/events/furano-zemi/flyer.png", alt: "FURANO起業家ゼミのチラシ", w: 1044, h: 1408 },
     ],
   },
   {
@@ -46,7 +46,7 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "新歓 / 交流",
     desc: "学生団体YUZU・Fuzionとの3団体合同で新歓イベントを開催。学生・社会人20名以上が参加し、団体紹介のほか「自分が団体のメンバーになったら?」をテーマにした企画アイディア大会を実施。約5人のチームに分かれ、温泉街での星空ツアーや北海道の伝統工芸品体験ツアーなど各団体の方針に沿った企画を立案し、団体を超えた学生同士の交流を深めました。",
     images: [
-      { src: "/images/events/joint-welcome-party/01.jpg", alt: "3団体合同新歓の様子" },
+      { src: "/images/events/joint-welcome-party/01.jpg", alt: "3団体合同新歓の様子", w: 1108, h: 1478 },
     ],
   },
   {
@@ -56,8 +56,8 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "企画 / 出展",
     desc: "株式会社ブルーブロッサム・風牧場と共催し、北海道産野菜のパウンドケーキやドリンクヨーグルトを東京の消費者へ届けるポップアップを実施。企画・導線設計・当日運営まで学生が主導しました。",
     images: [
-      { src: "/images/events/sweets-selection/01.jpg", alt: "スイーツセレクションの様子1" },
-      { src: "/images/events/sweets-selection/02.jpg", alt: "スイーツセレクションの様子2" },
+      { src: "/images/events/sweets-selection/01.jpg", alt: "スイーツセレクションの様子1", w: 1059, h: 1499 },
+      { src: "/images/events/sweets-selection/02.jpg", alt: "スイーツセレクションの様子2", w: 1058, h: 1507 },
     ],
   },
   {
@@ -67,8 +67,8 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "企画 / 体験",
     desc: "スギを使ったコースター作りと木育の発信を実施。世代を超えた「木育」の対話が生まれ、初めて名刺交換に挑戦したメンバーも積極的に人脈を広げました。",
     images: [
-      { src: "/images/events/ethical-ennichi/01.jpg", alt: "エシカル縁日の様子" },
-      { src: "/images/events/ethical-ennichi/day-01.jpg", alt: "エシカル縁日当日" },
+      { src: "/images/events/ethical-ennichi/01.jpg", alt: "エシカル縁日の様子", w: 1094, h: 1495 },
+      { src: "/images/events/ethical-ennichi/day-01.jpg", alt: "エシカル縁日当日", w: 1477, h: 1108 },
     ],
   },
   {
@@ -78,7 +78,7 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "企画 / 教育",
     desc: "カレー食堂心と共催で、北海道スープカレーの料理教室を実施。参加者が実際に手を動かしながら北海道の食文化を体験できる場をつくりました。",
     images: [
-      { src: "/images/events/soup-curry-class/01.jpg", alt: "スープカレー教室の様子" },
+      { src: "/images/events/soup-curry-class/01.jpg", alt: "スープカレー教室の様子", w: 1077, h: 1507 },
     ],
   },
   {
@@ -88,7 +88,7 @@ const featuredActivities: { title: string; dateRange: string; location: string; 
     category: "企画 / 体験",
     desc: "北海道産の木材を使ったものづくり体験。木の温もりと北海道の林業・森林資源への関心を東京の参加者に届けました。",
     images: [
-      { src: "/images/events/monozukuri-workshop/01.jpg", alt: "ものづくりワークショップの様子" },
+      { src: "/images/events/monozukuri-workshop/01.jpg", alt: "ものづくりワークショップの様子", w: 1036, h: 1474 },
     ],
   },
 ];
@@ -128,20 +128,22 @@ export default function ActivitiesPage() {
       <Section title="活動ピックアップ" lead="これまで実施してきたイベント・プロジェクトを紹介します。" bg="violet">
         <div className="space-y-6">
           {featuredActivities.map((activity) => (
-            <div key={activity.title} className="overflow-hidden rounded-2xl bg-white shadow-sm">
-              {/* Photo row */}
-              <div className={`grid gap-0.5 ${activity.images.length >= 2 ? "grid-cols-2" : "grid-cols-1"}`}>
-                {activity.images.map((img) => (
-                  <div key={img.src} className={`relative aspect-[4/3] overflow-hidden ${img.contain ? "bg-violet-100" : ""}`}>
+            <div key={activity.title} className="overflow-hidden rounded-2xl bg-white shadow-sm sm:flex">
+              {/* Photo row：チラシが多いため切り抜かず元の比率で表示 */}
+              <div className={`shrink-0 bg-violet-100/60 p-4 sm:p-5 ${activity.images.length >= 2 ? "sm:w-[26rem]" : "sm:w-72"}`}>
+                <div className={`mx-auto grid items-center gap-2 ${activity.images.length >= 2 ? "grid-cols-2" : "max-w-xs sm:max-w-none"}`}>
+                  {activity.images.map((img) => (
                     <Image
+                      key={img.src}
                       src={img.src}
                       alt={img.alt}
-                      fill
-                      className={img.contain ? "object-contain" : "object-cover"}
-                      sizes="(max-width: 640px) 100vw, 50vw"
+                      width={img.w}
+                      height={img.h}
+                      className="h-auto w-full rounded-lg shadow-sm"
+                      sizes="(max-width: 640px) 100vw, 320px"
                     />
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
               {/* Text */}
               <div className="p-6 sm:p-8">
@@ -165,7 +167,7 @@ export default function ActivitiesPage() {
           {galleryPhotos.map((img) => (
             <div
               key={img.src}
-              className={`relative overflow-hidden rounded-xl ${img.w > img.h ? "col-span-2 aspect-video" : "aspect-[3/4]"}`}
+              className={`relative overflow-hidden rounded-xl ${img.w > img.h ? "col-span-2 aspect-video" : "aspect-[8/9]"}`}
             >
               <Image
                 src={img.src}
